@@ -19,6 +19,17 @@ Simple script to sending messages to telegram chat
 
     $ cat sparrowfile
 
+    task-run  %(
+      task        => 'greetings',
+      plugin      => 'tg-message-sender',
+      parameters  => %( 
+        message   => 'I am Alive!',
+        id        => '1111111',
+        token     => "XXX:YYY"
+      )
+    );
+
+
 # Parameters
 
 ## message
